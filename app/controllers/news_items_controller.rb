@@ -1,3 +1,4 @@
+#encoding: utf-8
 class NewsItemsController < InheritedResources::Base
   before_filter :authenticate_admin_user!, :except => [:index, :show]
   before_filter :load_news_cate
