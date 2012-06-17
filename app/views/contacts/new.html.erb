@@ -1,0 +1,13 @@
+<% title ["联系我们", "庆锋祥"].join(' - ') %>
+<% meta_keywords ["联系我们", "庆锋祥"].join(' - ') %>
+<% meta_description ["联系我们", "庆锋祥"].join(' - ') %>
+
+  <% if page = Page.find_by_path_name('contact') %>
+     <%=page.body.html_safe unless page.body.blank?%>
+  <% end %>
+
+  <br/><br/>
+  <h3 class="title2">给我们留言</h3>
+  <div class="wrapper">
+    <%=render 'form' %>
+  </div>

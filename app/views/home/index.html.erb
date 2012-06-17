@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>庆锋祥首页</title>
+<style type="text/css">
+body{
+	background-image:url(images/back0.jpg);
+	background-repeat:repeat-y;
+	background-color:#1f0204;
+	background-position:top;	
+}
+#index_url a{
+	text-decoration: none;
+	font-family: "隶书";
+	font-size: 24px;
+	color: #FFF;
+	padding: 6px 10px;
+	background-color: #F00;
+	float: left;
+	position: absolute;
+	top: 580px;
+	left: 600px;
+	z-index: 100;
+}
+</style>
+<script src="../Scripts/swffix_modified.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="flash">
+  <%= play_flash("/assets/flash/index.swf", :width => "1440", :height =>"707") %>
+</div>
+
+<div id="index_url"><a href="/pages/1">进入主页</a></div>
+</body>
+</html>
