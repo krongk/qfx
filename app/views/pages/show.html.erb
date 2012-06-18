@@ -1,8 +1,32 @@
-<% title [@page.title, "成都红宝石网络，您身边的企业信息化解决专家"].join(' - ') %>
-<% meta_keywords [@page.meta_keywords, "企业信息化咨询，成都红宝石企业网络策划"].join(' - ') %>
-<% meta_description [@page.meta_description, "成都红宝石开发团队具有多年互联网从业经验，团队为企业提供策划、开发、推广、运维一站式服务！联系电话：15928661802"].join(' - ') %>
+<% title [@page.title, "庆锋祥"].join('-') %>
+<% meta_keywords [@page.meta_keywords,"庆锋祥"].join('-') %>
+<% meta_description [@page.meta_description,"庆锋祥,中国百年老字号之一的综合性商贸公司! 业务范围涉及餐饮、食品、茶业、酒水等行业"].join('-') %>
 
 
-<div id="page">
-  <%= @page.body.html_safe unless @page.body.blank?%>
-</div>
+<% if params[:style] %>
+<style type="text/css">
+  body{
+	background-image:url(/assets/back2.jpg);
+	background-repeat:repeat-y;
+	background-color:#1f0204;
+	background-position:top;	
+  }
+  #wapper {
+	background-image: url(/assets/02index_bg.jpg);
+  }
+</style>
+<% end %>
+
+<% if @page.path_name == 'net' %>
+	 <div id="flash">
+	  <%= play_flash("/assets/flash/earth.swf", :width => "468", :height =>"278") %>
+	</div>
+<% elsif @page.present? && @page.path_name == 'yetai' %>
+  <% @news_items = NewsItem.paginate(:page => params[:page] || 1, :per_page => 15) %>
+   <ul class="news_list">
+	  <% @news_items.each do |item| %>
+	    <li><%=link_to item.title, news_item_path(item, :style=> 2), :target => '_blank' %></li>
+	  <% end %>
+	</ul>
+<% end %>
+<%=@page.body.html_safe %>

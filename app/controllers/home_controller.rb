@@ -2,6 +2,7 @@
 load 'forager.rb'
 
 class HomeController < ApplicationController
+  layout :nil
   def index
   	#redirect_to :action => :site_map
   end

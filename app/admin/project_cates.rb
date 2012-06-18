@@ -1,8 +1,9 @@
 #encoding: utf-8
 ActiveAdmin.register ProjectCate do
-  menu :label => 'IT项目中心', :priority  => 5
-  menu :label => "项目分类", :parent => "IT项目中心"
-
+  #menu :label => 'IT项目中心', :priority  => 5
+  #menu :label => "项目分类", :parent => "IT项目中心"
+  menu false
+  
   sidebar :"帮助中心" do
     ul do
       li "本页保存IT项目的分类信息！"
