@@ -1,4 +1,3 @@
-#encoding: utf-8
 class ProjectItemsController < InheritedResources::Base
   before_filter :authenticate_admin_user!, :except => [:index, :show]
   before_filter :load_project_cate

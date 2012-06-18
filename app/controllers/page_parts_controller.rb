@@ -1,4 +1,3 @@
-#encoding: utf-8
 class PagePartsController < ApplicationController
   before_filter :authenticate_admin_user!, :except => [:index, :show]
   # GET /page_parts

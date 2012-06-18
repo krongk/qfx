@@ -23,6 +23,16 @@ class PagesController < ApplicationController
     end
     @page = Page.find(1) if @page.nil?
 
+    #special action 
+    case @page.path_name
+    when 'english'
+      redirect_to "/en/#{params[:id]}"
+      return
+    when 'product'
+      redirect_to product_cates_url
+      return
+    end
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @page }
