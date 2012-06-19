@@ -91,7 +91,8 @@ body{
 	margin-left: 12px;
 }
 .news_list li a {
-	color: #033;
+	color: #006633;
+	font-size: 14px;
 	text-decoration: none;
 }
 .right_tab {
@@ -112,4 +113,17 @@ a.link_btn {
 	color: #F00;
 	text-decoration: none;
 	font-weight: 700;
+}
+
+a.current {
+	color: red;
+}
+
+.current {
+	color: red;
+	font-weight: 600;
+}
+
+.green{
+	color: #006633;
 }

@@ -1,13 +1,14 @@
 <% if page.present? && page.path_name == 'yetai' %>
-  庆锋祥业态新闻
+  <b class="current">庆锋祥业态新闻</b>
 <% elsif  page.present? && page.path_name == 'net' %>
-  庆锋祥销售网络
+  <b class="current">庆锋祥销售网络</b>
 <% elsif  page.present? && page.path_name == 'contact' %>
-  联系我们
+ <p><b class="current"> 联系我们</b></p>
 <% else %>
-	<a href="/pages/jianjie">企业简介</a>
-	<a href="/pages/wenhua">企业文化</a> 
-	<a href="/pages/rongyu">企业荣誉</a> 
-	<a href="/pages/zizhi">企业资质</a> 
-	<a href="/pages/job">招贤纳士</a> 
+	<a href="/pages/jianjie" <%=current_class('jianjie') %>>企业简介</a>
+	<a href="/pages/wenhua" <%=current_class('wenhua') %>>企业文化</a> 
+	<a href="/pages/rongyu" <%=current_class('rongyu') %>>企业荣誉</a> 
+	<a href="/pages/zizhi" <%=current_class('zizhi') %>>企业资质</a> 
+	<a href="/pages/job" <%=current_class('job') %>>招贤纳士</a> 
 <% end %>
+

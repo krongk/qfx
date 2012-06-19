@@ -42,9 +42,9 @@
     <td>&nbsp;</td>
     <td>
      <% if params[:style] %>
-       <img src="/assets/02index_about.jpg"  height="60" />
+       <img src="/assets/02index_about.jpg" />
      <% else %>
-       <img src="/assets/01index_about.jpg"  height="60" />
+       <img src="/assets/01index_about.jpg"  />
      <% end %>
     </td>
   </tr>
@@ -71,13 +71,13 @@
     <td><table width="400" border="0" cellspacing="0" cellpadding="0" align="right" class="title">
       <tr>
         <td align="right">
-        <a href="/pages/about">关于庆锋祥</a>
+        <a href="/pages/about" <%=current_class('about|jianjie|wenhua|rongyu|zizhi|job') %>>关于庆锋祥</a>
         <span class="shu">|</span>
-        <a href="/pages/yetai?style=2">庆锋祥业态</a>
+        <a href="/pages/yetai?style=2"  <%=current_class('yetai|news_items') %>>庆锋祥业态</a>
         <span class="shu">|</span>
-        <a href="/pages/net?style=2">庆锋祥销售网络</a>
+        <a href="/pages/net?style=2"  <%=current_class('net') %>>庆锋祥销售网络</a>
         <span class="shu">|</span>
-        <a href="/contact">联系庆锋祥</a>
+        <a href="/contact"  <%=current_class('contact') %>>联系庆锋祥</a>
         </td>
       </tr>
     </table></td>
