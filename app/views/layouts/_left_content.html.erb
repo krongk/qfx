@@ -3,10 +3,15 @@
     <%= play_flash("/assets/flash/map3.swf", :width => "578", :height =>"280") %>
   </div>
 <% elsif @page.present? && @page.path_name == 'yetai'%>
-  <div id='slideshow1'>
-    <%=image_tag asset_path("lunbo_bar1.png"), :width=>"578px"%>
-    <%=image_tag asset_path("lunbo_bar2.png"), :width=>"578px"%>
-    <%=image_tag asset_path("lunbo_bar3.png"), :width=>"578px"%>
+  <div id="slider-wrapper">
+      <div id="slider" class="nivoSlider">
+          <a href="#" >
+            <%=image_tag asset_path("lunbo_bar1.png"), :width=>"578px", :title =>"庆锋祥"%></a>
+          <a href="#" >
+            <%=image_tag asset_path("lunbo_bar2.png"), :width=>"578px", :title =>"庆锋祥"%></a>
+          <a href="#" >
+            <%=image_tag asset_path("lunbo_bar3.png"), :width=>"578px", :title =>"庆锋祥"%></a>
+      </div>
   </div>
   <div class='slide_small_img'>
     <%=image_tag asset_path("bar1.png"), :width=>"188px"%>
@@ -16,13 +21,13 @@
 <% else %>
   <div id="slider-wrapper">
       <div id="slider" class="nivoSlider">
-          <a href="http://www.alixixi.com/" target="_blank">
+          <a href="/pages/jianjie" target="_blank">
             <%=image_tag asset_path("lunbo_1.png"), :width=>"578px", :title =>"庆锋祥"%></a>
-          <a href="http://alixixi.com/" target="_blank">
+          <a href="/pages/wenhua" target="_blank">
             <%=image_tag asset_path("lunbo_2.png"), :width=>"578px", :title =>"庆锋祥"%></a>
-          <a href="http://nifengla.com/" target="_blank">
+          <a href="/pages/rongyu" target="_blank">
             <%=image_tag asset_path("lunbo_3.png"), :width=>"578px", :title =>"庆锋祥"%></a>
-          <a href="http://maitianquan.com/" target="_blank">
+          <a href="/contact" target="_blank">
             <%=image_tag asset_path("lunbo_4.png"), :width=>"578px", :title =>"庆锋祥"%></a>
       </div>
   </div>
