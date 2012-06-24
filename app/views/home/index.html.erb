@@ -10,7 +10,9 @@ body{
 	background-image:url(images/back0.jpg);
 	background-repeat:repeat-y;
 	background-color:#1f0204;
-	background-position:top;	
+	background-position:top;
+	color: #fff;
+	font-size: 12px;
 }
 #index_url a{
 	float: left;
@@ -19,14 +21,31 @@ body{
 	left: 900px;
 	z-index: 100;
 }
+#wrapper{
+	margin: 0 auto;
+	text-align: center;
+}
 </style>
-<script src="../Scripts/swffix_modified.js" type="text/javascript"></script>
+<script src="/assets/flashobj.js" type="text/javascript"></script>
 </head>
 <body>
-<div id="flash">
-  <%= play_flash("/assets/flash/index.swf", :width => "1440", :height =>"707") %>
-</div>
 
-<div id="index_url"><a href="/pages/1"><img src="/assets/bar_a.png" /></a></div>
+<div id="wrapper">
+	<div id="sasFlashFocus27"></div>
+	<script>
+		var sohuFlash2 = new sohuFlash("/assets/flash/index.swf", "20", 708, 438, "7");
+		sohuFlash2.addParam("quality", "high");
+		sohuFlash2.addParam("wmode", "opaque");
+		sohuFlash2.addVariable("image","/assets//ali_xixi_01.jpg|/assets//ali_xixi_02.jpg|/assets//ali_xixi_03.jpg|/assets//ali_xixi_04.jpg|");sohuFlash2.addVariable("url","/pages/jianjie/|/pages/yetai?style=2|/pages/jianjie/|/pages/jianjie/");sohuFlash2.addVariable("stopTime","5000");
+		sohuFlash2.write("sasFlashFocus27");
+	</script>
+
+	<div id="footer">
+	  <br><br>
+	  <p>成都庆锋祥商贸有限责任公司版权所有</p>
+	  <p><a href="/" target="_blank">蜀ICP备注12014566号<a/>
+	  <p>&copy;2012-2015 版权所有</p>
+	</div>
+</div>
 </body>
 </html>

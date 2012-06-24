@@ -16,7 +16,11 @@
   <!--[if lt IE 7]>
     <link href="/assets/ie_style.css" rel="stylesheet" type="text/css" />
   <![endif]-->
-
+  <script type="text/javascript">
+    $(window).load(function() {
+      $('#slider').nivoSlider();
+    });
+  </script>
 </head> 
  
 <body id="page1">
@@ -86,12 +90,8 @@
   </tr>
   <tr>
     <td align="right" valign="top" rowspan="2">
-      <% if @page.present? %>
         <br/>
         <%=render :partial => "layouts/left_content", :locals =>{:page => @page} %>
-      <% else %>
-        <img src="/assets/lunbo_bar1.png" width="578" height="231" />
-      <% end %>
     </td>
     <td>&nbsp;</td>
     <td align="left" valign="top">
